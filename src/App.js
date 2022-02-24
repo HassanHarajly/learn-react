@@ -5,7 +5,7 @@ function App() {
   const name = 'hassan'
   return (
     <div className="App">
-      <Header/>
+      <Header title='something2'/>
     </div>
   );
 }
