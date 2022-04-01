@@ -1,14 +1,10 @@
-
-import Counters from "./components/Counters";
-
-// initial state of the database
+import {CounterComponentMobx} from "./mobx/CounterComponentMobx";
+import {counterStore} from "./mobx/CounterStore";
 
 function App() {
-    // you can think of this as initializing and setting
-    // up a connection to the backend
 
     return (
-        <Counters/>
+        <CounterComponentMobx counterStore={counterStore}/>
     );
 }
 
