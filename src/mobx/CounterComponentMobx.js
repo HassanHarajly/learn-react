@@ -10,7 +10,7 @@ export const CounterComponentMobx = observer(({counterStore}) => {
                 () => {
                 counterStore.incrementCounter(100)
             }
-            }> hi</button>
+            }> increment counter with mobx</button>
         </>
     );
 });
