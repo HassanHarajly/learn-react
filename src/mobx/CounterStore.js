@@ -1,4 +1,4 @@
-const {makeObservable, observable, action, autorun} = require("mobx");
+const {makeObservable, observable, action} = require("mobx");
 
 class CounterStore {
     counters = 0;
@@ -9,7 +9,6 @@ class CounterStore {
                 counters:observable,
             getCounters:observable,
             incrementCounter:action});
-        autorun(() => console.log(this.getCounters()));
     }
     getCounters() {
         return this.counters;
