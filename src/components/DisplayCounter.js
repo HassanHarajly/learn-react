@@ -2,7 +2,7 @@ const DisplayCounter = ({props}) => {
     return (
         <header>
             <h1>
-            counter: {props.count + ""}
+                Counter: {props.count}
             </h1>
         </header>
     );

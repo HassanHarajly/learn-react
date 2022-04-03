@@ -1,5 +1,5 @@
 export function CounterComponent(props) {
-    return <button onClick={props.onClick}>
+    return <button data-testid="Counters" onClick={props.onClick}>
         increment
     </button>;
 }

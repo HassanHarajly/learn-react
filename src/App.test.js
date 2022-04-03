@@ -10,3 +10,13 @@ test('should increment counter on click of button', () => {
   expect(CounterAmount).toBeInTheDocument();
 });
 
+
+test('should increment counter when button is clicked', () => {
+  render(<App />);
+  const button = screen.getByTestId("Counters");
+  button.click();
+  button.click();
+  const CounterAmount = screen.getByText("Counter: 2");
+  expect(CounterAmount).toBeInTheDocument();
+});
+
