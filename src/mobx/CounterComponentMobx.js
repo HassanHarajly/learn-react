@@ -1,16 +1,19 @@
-const {observer} = require( 'mobx-react');
+import DisplayCountersWithMobx from "./DisplayCountersWithMobx";
 
 
-export const CounterComponentMobx = observer(({counterStore}) => {
+
+export const CounterComponentMobx = (({counterStore}) => {
 
     return (
         <>
-            {counterStore?.getCounters()}
-            <button onClick={
+
+            <button data-testid="Counter-Button" onClick={
                 () => {
-                counterStore.incrementCounter(100)
+                counterStore.incrementCounter(1)
             }
             }> increment counter with mobx</button>
+
+            <DisplayCountersWithMobx counterStore={counterStore}/>
         </>
     );
 });

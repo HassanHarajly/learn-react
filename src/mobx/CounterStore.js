@@ -20,5 +20,4 @@ class CounterStore {
 }
 
 export const counterStore = new CounterStore();
-counterStore.incrementCounter(1);
 

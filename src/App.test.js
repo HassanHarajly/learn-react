@@ -1,15 +1,12 @@
 import { render, screen } from '@testing-library/react';
 import App from './App';
 
-test('renders learn react link', () => {
+test('should increment counter on click of button', () => {
   render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+  const button = screen.getByTestId("Counter-Button");
+  button.click();
+  button.click();
+  const CounterAmount = screen.getByText("Counter Amount: 2");
+  expect(CounterAmount).toBeInTheDocument();
 });
 
-
-test('renders header', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/Task Tracker/i);
-  expect(linkElement).toBeInTheDocument();
-});
