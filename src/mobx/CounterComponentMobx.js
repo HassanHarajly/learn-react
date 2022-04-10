@@ -3,7 +3,6 @@ import DisplayCountersWithMobx from "./DisplayCountersWithMobx";
 
 
 export const CounterComponentMobx = (({counterStore}) => {
-
     return (
         <>
             <h1>counters with mobx</h1>
