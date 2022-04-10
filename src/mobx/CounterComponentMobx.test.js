@@ -18,6 +18,18 @@ test('should call get counter when component is rendered', () => {
     expect(counterStoreStub.getCountersHasBeenCalled).toEqual(true);
 });
 
+test('should increment counter on click of button', () => {
+    const counterStoreStub = new CounterStoreStub();
+    render(<CounterComponentMobx counterStore={counterStoreStub} />);
+    const button = screen.getByTestId("Counter-Button");
+    button.click();
+    button.click();
+    render(<DisplayCountersWithMobx counterStore={counterStoreStub} />);
+    const CounterAmount = screen.getByText("Counter Amount: 2");
+    expect(CounterAmount).toBeInTheDocument();
+});
+
+
 class CounterStoreStub {
     counters = 0;
     incrementHasBeenCalled = false;

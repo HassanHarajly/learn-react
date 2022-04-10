@@ -1,15 +1,9 @@
-import {CounterComponentMobx} from "./mobx/CounterComponentMobx";
-import {counterStore} from "./mobx/CounterStore";
-import {Counters} from "./components/Counters";
+import {LandingPage} from "./LandingPage";
 
 function App() {
 
     return (
-        <>
-            <CounterComponentMobx counterStore={counterStore}/>
-
-            <Counters/>
-        </>
+        <LandingPage/>
     );
 }
 
